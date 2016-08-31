@@ -6,16 +6,8 @@
 </head>
 
 <body ng-controller="AppController as App">
+  <products-list></products-list>
 
-  <h1 ng-bind="App.title"></h1>
-  <hr/>
-
-  <pre ng-bind="App.info | json "></pre>
-
-  <hr/>
-  version <span ng-bind="App.version"></span>
-
-  <!-- served from webpack-dev-server -->
-  <script src="bundle.js"></script>
+<script src="bundle.js"></script>
 </body>
 </html>
