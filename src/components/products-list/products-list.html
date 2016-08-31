@@ -1,6 +1,10 @@
 <div>
   <h1>Products List</h1>
   <div>
+    <div>
+      Sort: {{$ctrl.sort}}<br/>
+      Filter: {{$ctrl.filter}}
+    </div>
     <button ng-click="$ctrl.changeSort('price')">Change sort for price</button>
   </div>
 </div>

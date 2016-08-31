@@ -1,13 +1,17 @@
 import {CHANGE_SORT, CHANGE_FILTER} from './actions.js'
+import _ from 'lodash';
 
-export const productsReducer =  (state = {}, action) => {
+const initialState = {
+  sort: 'size',
+  filter: 'one'
+}
+
+export const productsInfo =  (state = initialState, action) => {
   switch(action.type) {
     case CHANGE_SORT:
-      console.log(`Sort is set to:${action.value}`);
-      return state;
+      return _.extend({}, state, {sort: action.value});
     case CHANGE_FILTER:
-      console.log(`Filter is set to: ${action.value}`);
-      return state;
+      return _.extend({}, state, {filter: action.value});
     default:
       return state;
   }
