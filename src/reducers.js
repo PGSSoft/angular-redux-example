@@ -1,6 +1,6 @@
 import {CHANGE_SORT, CHANGE_FILTER} from './actions.js'
 
-export default (state = {}, action) => {
+export const productsReducer =  (state = {}, action) => {
   switch(action.type) {
     case CHANGE_SORT:
       console.log(`Sort is set to:${action.value}`);
