@@ -1,16 +1,15 @@
-<div>
+<div class="products-list">
   <h1>Products List</h1>
-  <div>
     <md-list flex>
-        <md-subheader class="md-no-sticky">Products list</md-subheader>
-        <md-list-item class="md-3-line" ng-repeat="item in $ctrl.productsList">
-          <div>
-            {{item.name}}
-            {{item.price}}
-          </div>
-        </md-list-item>
-        <md-divider ></md-divider>
-      </md-list>
-    <button ng-click="$ctrl.changeSort('price')">Change sort for price</button>
-  </div>
+      <md-list-item class="md-3-line" ng-repeat="item in $ctrl.productsList">
+        <img ng-src="http://lorempixel.com/50/50/cats?{{item.name}}" class="md-avatar" alt="{{item.name}}" />
+        <div class="md-list-item-text" layout="column">
+          <h3>{{ item.name }}</h3>
+          <p>{{ item.price }}</p>
+        </div>
+      </md-list-item>
+    </md-list>
+    <md-button class="md-raised" ng-click="$ctrl.changeSort('price')">Sort by price</md-button>
+    <md-button class="md-raised" ng-click="$ctrl.changeSort('name')">Sort by name</md-button>
+    <md-button class="md-raised" ng-click="$ctrl.changeSort('id')">Sort by id</md-button>
 </div>

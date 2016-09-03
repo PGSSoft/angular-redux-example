@@ -1,5 +1,9 @@
-import productsListComponent from './products-list.component.js';
+import 'angular-material';
+import 'angular-material/angular-material.css';
 
-export default angular.module('components.productsList', [])
+import productsListComponent from './products-list.component.js';
+import './products-list.css';
+
+export default angular.module('components.productsList', ['ngMaterial'])
   .component('productsList', productsListComponent)
   .name;
