@@ -1,0 +1,9 @@
+{
+  "extends": "airbnb",
+  "globals": {
+      "angular": true
+    },
+  "env": {
+      "browser": true
+    }
+}
