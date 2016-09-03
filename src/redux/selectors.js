@@ -2,9 +2,10 @@ import { createSelector } from 'reselect';
 
 export const sortSelector = state => state.productsInfo.sort;
 export const filterSelector = state => state.productsInfo.filter;
+export const productsSelector = state => state.productsInfo.products;
 
-export const sortFilterSelector = createSelector(
+export const sortedProductsSelector = createSelector(
+  productsSelector,
   sortSelector,
-  filterSelector,
-  (sort, filter) => ({ sort, filter })
+  (products, sort) => ({ products: products.sort((a, b) => a[sort] > b[sort]) })
 );

@@ -2,7 +2,13 @@ import _ from 'lodash';
 import { CHANGE_SORT, CHANGE_FILTER } from './actions.js';
 
 const initialState = {
-  sort: 'size',
+  products: [
+    { id: 0, name: 'Fabulous product', price: 10 },
+    { id: 1, name: 'Super product', price: 2 },
+    { id: 2, name: 'Amazing thing', price: 4 },
+    { id: 3, name: 'Nothing to do here', price: 2000 },
+  ],
+  sort: 'id',
   filter: 'one',
 };
 

@@ -1,46 +1,46 @@
-var path = require('path');
+const path = require('path');
 
 module.exports = {
 
   // set the context (optional)
-  context: path.join( __dirname, '/src'),
+  context: path.join(__dirname, '/src'),
   entry: 'index.js',
 
   // enable loading modules relatively (without the ../../ prefix)
   resolve: {
-    root: path.join( __dirname, '/src')
+    root: path.join(__dirname, '/src'),
   },
 
   module: {
     loaders: [
 
       // load and compile javascript
-      { test: /\.js$/, exclude: /node_modules/, loader:"babel" },
+      { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
 
       // load css and process less
-      { test: /\.css$/, loader: "style!css"},
+      { test: /\.css$/, loader: 'style!css' },
 
       // load JSON files and HTML
-      { test: /\.json$/, loader: "json" },
-      { test: /\.html$/, exclude: /node_modules/, loader:"raw" },
+      { test: /\.json$/, loader: 'json' },
+      { test: /\.html$/, exclude: /node_modules/, loader: 'raw' },
 
       // load fonts(inline base64 URLs for <=8k)
-      { test: /\.(ttf|eot|svg|otf)$/, loader: "file" },
-      { test: /\.woff(2)?$/, loader: "url?limit=8192&minetype=application/font-woff"},
+      { test: /\.(ttf|eot|svg|otf)$/, loader: 'file' },
+      { test: /\.woff(2)?$/, loader: 'url?limit=8192&minetype=application/font-woff' },
 
       // load images (inline base64 URLs for <=8k images)
-      {test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
-    ]
+      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' },
+    ],
   },
 
   // webpack dev server configuration
   devServer: {
-    contentBase: "./src",
+    contentBase: './src',
     noInfo: false,
     hot: true,
     port: 3000,
   },
 
   // support source maps
-  devtool: "#inline-source-map"
+  devtool: '#inline-source-map',
 };

@@ -1,7 +1,7 @@
 <div class="products-list">
   <h1>Products List</h1>
     <md-list flex>
-      <md-list-item class="md-3-line" ng-repeat="item in $ctrl.productsList">
+      <md-list-item class="md-3-line" ng-repeat="item in $ctrl.products">
         <img ng-src="http://lorempixel.com/50/50/cats?{{item.name}}" class="md-avatar" alt="{{item.name}}" />
         <div class="md-list-item-text" layout="column">
           <h3>{{ item.name }}</h3>
