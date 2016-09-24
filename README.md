@@ -12,5 +12,5 @@ An example app that shows how you can connect angular 1.5 + redux + ng-redux + r
 
   Navigate to localhost:3000.
   
-## License
+## 3. License
 The project is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
