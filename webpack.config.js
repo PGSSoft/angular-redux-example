@@ -22,7 +22,7 @@ module.exports = {
 
       // load JSON files and HTML
       { test: /\.json$/, loader: 'json' },
-      { test: /\.html$/, exclude: /node_modules/, loader: 'raw' },
+      { test: /\.html$/, exclude: /node_modules/, loader: 'html' },
 
       // load fonts(inline base64 URLs for <=8k)
       { test: /\.(ttf|eot|svg|otf)$/, loader: 'file' },

@@ -5,8 +5,8 @@ import { sortedProductsSelector } from '../../redux/selectors';
 const productsListComponent = {
   template: productsListTemplate,
   controller($scope, $ngRedux) {
-    $scope.$on('$destroy', $ngRedux.connect(s =>
-      sortedProductsSelector(s), { changeSort, changeFilter })(this));
+    $scope.$on('$destroy', $ngRedux.connect(
+      sortedProductsSelector, { changeSort, changeFilter })(this));
   },
 };
 
