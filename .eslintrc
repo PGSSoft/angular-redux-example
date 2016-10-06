@@ -2,8 +2,13 @@
   "extends": "airbnb",
   "globals": {
       "angular": true
-    },
+  },
   "env": {
       "browser": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
     }
+  }
 }
