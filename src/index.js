@@ -1,7 +1,7 @@
 import angular from 'angular';
 import { combineReducers } from 'redux';
 import ngRedux from 'ng-redux';
-import productsInfo from './redux/reducers';
+import { productsInfo } from './redux/reducers';
 
 import productsListModule from './components/products-list/products-list.module.js';
 
